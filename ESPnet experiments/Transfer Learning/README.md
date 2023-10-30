@@ -1,22 +1,10 @@
-Now that you have created your *data* and *downloads* folders, we need to adjust the hyper-parameters by deleting the old version and copying the one that's in this repository:
-```bash
-rm conf/tuning/finetune_tacotron2.yaml
-mv used_scripts/finetune_tacotron2.yaml conf/tuning
-```
+Now that you have chosen to try out the __Transfer_Learning__ experiment on TunArTTS, we need to adjust the hyper-parameters by deleting the old version of the parameters file of Tacotron2 model, and copying the one that's in this repository. 
 
-Delete the ```run.sh``` file and __replace__ it by the one existing in this repository
+Before running we need to be aware that the following script will downsample our dataset from 44100 Hz to 22050 Hz to match that of LJSpech's.
 
-```bash
-rm run.sh
-```
-Before running we need to execute the following script to downsample our dataset from 44100 Hz to 22050 Hz.
-```sh
-pip install pydub
-python3 used_scripts/downsample.py
-```
 Moreover, you need to create the metadata for your training by applying the follwing command:
 ```bash
-./run.sh --stage 2 --stop-stage 5
+./run.sh <dataset_directory_absolute_path> <path_where_to_save_tsv_files> <alphabet> <relative_path_to_wav_folder_in_dataset_inside_downloads> <path_to_train_tacotron2.yaml>
 ```
 
 ### Loading the pre-trained model
@@ -35,6 +23,8 @@ Now we are going to start the training.
     --train_args "--init_param downloads/path/to/.../checkpoint.pth:::tts.enc.embed" \
     --tag finenetune_tacotron2_raw_phn
 ```
+<font color="#FF5733"> /!\ Don't forget to replace the __/path/to__ with your pre-trained model checkpoint path inside _downloads_ /!\ </font>
+
 ## Run the teacher model on FastSpeech 2.
 Run the following command to create the ``durations`` for FastSpeech 2 to train on. 
 ```sh
