@@ -1,8 +1,8 @@
 Through our experiments we have compared, mainly, two resulted systems: 
 - Running an experiment from scratch on TunArTTS.
-- Applying Transfer Learning on TunArTTS using the English dataset LSPeech.
+- Applying Transfer Learning on TunArTTS using the English dataset LJSPeech.
 
-Using this repository, three steps in common to follow for both steps which are:
+Using this repository, the steps in common to follow for both approaches are:
 - The installation of ESPnet.
 - The creation of the __downloads__ folder containing the dataset.
 - The creation of the __data__ folder containing the subdivision of your train/dev/test sets conforming with the sets chosen in our experiments. 
