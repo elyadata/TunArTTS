@@ -31,4 +31,9 @@ python3 generate_tunisian_dataset.py \
  --mp3-files-path ${THE_PATH_OF_THE_DOWNLOADED_AUDIOS}\
  --save-data-directory-path ${THE_PATH_WHERE_TO_SAVE_THE_GENERATED_DATASET}
 ```
-TODO add remove silence
+6. Remove silence 
+```bash
+python3 remove_silence.py \
+ --audios-path ${AUDIOS_PATH} \
+ --save-data-directory-path ${THE_PATH_WHERE_TO_SAVE_THE_AUDIOS_WITHOUT_SILENCE}
+```
