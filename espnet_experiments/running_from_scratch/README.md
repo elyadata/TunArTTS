@@ -7,3 +7,7 @@ You need to provide the path to ```train_tacotron2.yaml``` so it would be copied
 ```
 
 Finally, your folders will be created along with the splitting of the dataset to test/dev/train subsets and the training will start.
+
+P.S.
+- This path <path_to_train_tacotron2.yaml> must be an absolute path.
+- To execute this script, your current position must be under 'espnet_experiments/running_from_scratch'.
