@@ -7,6 +7,11 @@ Moreover, you need to create the metadata for your training by applying the foll
 ./run.sh <dataset_directory_absolute_path> <path_where_to_save_tsv_files> <alphabet> <relative_path_to_wav_folder_in_dataset_inside_downloads> <path_to_train_tacotron2.yaml>
 ```
 
+P.S.
+- This path <path_to_train_tacotron2.yaml> must be an absolute path.
+- To execute this script, your current position must be under 'espnet_experiments/running_from_scratch'.
+
+
 ### Loading the pre-trained model
 download the pre-trained model from this link: [Zenodo model](https://zenodo.org/record/4925105) and load it under the **downloads** folder.
 \

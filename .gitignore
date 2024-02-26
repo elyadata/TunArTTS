@@ -160,3 +160,6 @@ cython_debug/
 .idea/
 derja_ninja/
 test/
+espnet_experiments/transfer_learning/espnet/
+espnet_experiments/transfer_learning/mono_speaker
+espnet_experiments/transfer_learning/save/
