@@ -47,6 +47,8 @@ python3 ../tools/data_dir_generation.py \
  --tsv-files-path $2 \
  --save-data-directory-path ${SAVE_DATA_DIRECTORY_PATH}
 
+python3 downsample.py $4
+
 cd espnet/egs2/qasr_tts/tts1
 
 #Update the hyperparameters
@@ -57,9 +59,6 @@ cp $5 conf/tuning
 utils/fix_data_dir.sh data/test
 utils/fix_data_dir.sh data/dev
 utils/fix_data_dir.sh data/train
-
-pip install pydub
-python3 downsample.py $4
 
 ./run.sh --stage 2 \
  --stop-stage 5 \

@@ -13,12 +13,14 @@ P.S.
 
 
 ### Loading the pre-trained model
-download the pre-trained model from this link: [Zenodo model](https://zenodo.org/record/4925105) and load it under the **downloads** folder.
+Go to `espnet/egs2/qasr_tts/tts1`. Then download the pre-trained model from this link: [Zenodo model](https://zenodo.org/record/4925105), extract it, and load it under the **downloads** folder.
+\
+P.S. If **downloads** folder does not exist, please create it.
 \
 \
 After <font color="43EEC0"> stage 5</font>, we need to copy the token_list as stated exactly in this [Pre-trained model recipe](https://github.com/espnet/espnet/blob/master/egs2/jvs/tts1/README.md).
 
-### Running until stage 6
+### Running only stage 6
 Now we are going to start the training.
 
 ```sh
@@ -26,7 +28,15 @@ Now we are going to start the training.
     --stage 6 \
     --stop-stage 6 \
     --train_args "--init_param downloads/path/to/.../checkpoint.pth:::tts.enc.embed" \
-    --tag finenetune_tacotron2_raw_phn
+    --tag finenetune_tacotron2_raw_phn \
+    --fs 22050 \
+    --cleaner none \
+    --token_type char\
+    --g2p none \
+    --train_set train \
+    --valid_set dev \
+    --test_sets test \
+    --srctexts "data/train/text"
 ```
 <font color="#FF5733"> /!\ Don't forget to replace the __/path/to__ with your pre-trained model checkpoint path inside _downloads_ /!\ </font>
 

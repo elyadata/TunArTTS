@@ -33,7 +33,7 @@ tts_conf:                        # keyword arguments for the selected model
     use_residual: false          # whether to use residual connection in encoder
     dropout_rate: 0.5            # dropout rate
     zoneout_rate: 0.1            # zoneout rate
-    reduction_factor: 3          # reduction factor
+    reduction_factor: 1          # reduction factor
     spk_embed_dim: null          # speaker embedding dimension
     use_masking: true            # whether to apply masking for padded part in loss calculation
     bce_pos_weight: 20.0          # weight of positive sample in binary cross entropy calculation
