@@ -50,6 +50,7 @@ class MetaDataConstants:
     CHAR_TO_REPLACE = {'.': '', ',': '', '+': '', '،': '',
                        '-': '', '!': '', '?': '', '\\': '', '%': ''}
 
+
 class AudioConstants:
     SAMPLE_RATE = 44100
     THRESHOLD_IN_DB = 45
@@ -84,3 +85,9 @@ class BuckwalterMapping:
         u'\u064b': u'F', u'\u064c': u'N', u'\u064d': u'K', u'\u064e': u'a',
         u'\u064f': u'u', u'\u0650': u'i', u'\u0651': u'~', u'\u0652': u'o'
     }
+
+class Trim_silences:
+    min_silence_len = 100
+    silence_thresh = -45
+    keep_silence = 50
+    audio_format = "wav"
