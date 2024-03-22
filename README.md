@@ -15,4 +15,14 @@ You can test our models in this [Huggingface space](https://huggingface.co/space
 - Finally, you have to train the model either from scratch or using transfer learning technique as described in `espnet_experiments`.
 
 
+If you use TunArTTS in your research, please cite it using the following BibTeX entry:
 
+@inproceedings{TunArTTS,
+    title = "TunArTTS: Tunisian Arabic Text-To-Speech Corpus",
+    author = "Imen, Laouirine and Rami Kammoun  and Fethi BOUGARES",
+    booktitle = "THE 2024 JOINT INTERNATIONAL CONFERENCE ON COMPUTATIONAL LINGUISTICS, LANGUAGE RESOURCES AND EVALUATION",
+    month = mai,
+    year = "2024",
+    address = "TORINO, ITALIA",
+    publisher = "European Language Resources Association",
+    }
