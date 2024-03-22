@@ -16,7 +16,7 @@ You can test our models in this [Huggingface space](https://huggingface.co/space
 
 
 If you use TunArTTS in your research, please cite it using the following BibTeX entry:
-
+```bibtex
 @inproceedings{TunArTTS,
     title = "TunArTTS: Tunisian Arabic Text-To-Speech Corpus",
     author = "Imen, Laouirine and Rami Kammoun  and Fethi BOUGARES",
@@ -26,3 +26,4 @@ If you use TunArTTS in your research, please cite it using the following BibTeX 
     address = "TORINO, ITALIA",
     publisher = "European Language Resources Association",
     }
+```
